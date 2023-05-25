@@ -7,10 +7,16 @@
 "" -- Suggested options --
 " Show a few lines of context around the cursor. Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
-set scrolloff=5
+set scrolloff=8
 
 " Do incremental searching.
 set incsearch
+
+" Highlight search
+set hlsearch
+
+" Colors :)
+set termguicolors
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
@@ -23,7 +29,6 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-commentary'
 " Always highlight copy (yank)
 Plug 'machakann/vim-highlightedyank'
-set incsearch
 " File tree
 Plug 'preservim/nerdtree'
 " Replace a line with register
