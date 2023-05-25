@@ -1,1 +1,104 @@
-/home/a.bonicelli@iungo.it/.ideavimrc
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+" Always highlight copy (yank)
+Plug 'machakann/vim-highlightedyank'
+set incsearch
+" File tree
+Plug 'preservim/nerdtree'
+" Replace a line with register
+Plug 'vim-scripts/ReplaceWithRegister'
+" Blazing-ly fast
+Plug 'easymotion/vim-easymotion'
+
+" spacer as leader
+let mapleader = ' '
+
+" Using system clipboard
+set clipboard+=unnamedplus
+
+" Line numbers
+set number relativenumber
+
+" Adding empty line
+map <leader><Enter> o<ESC>k
+map <leader><S-Enter> O<ESC>j
+" Adding empty lines and moving
+map <Enter> o<ESC>
+map <S-Enter> O<ESC>
+
+" Select everything on the current file
+map <leader>a ggvG  
+
+" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+map \b <Action>(ToggleLineBreakpoint)
+
+" Map \g to quick implementation of the function
+map \g <Action>(QuickImplementations)
+
+" Harpoon...
+" Toggle bookmarks
+map <C-e> <Action>(ToggleBookmark)
+
+" stop
+map <leader>s <Action>(Stop)
+
+" Reload ideavim config
+map <leader>rc <Action>(IdeaVim.ReloadVimRc.reload)
+
+" project search for a file via contents - Project Search
+map <leader>ps <Action>(FindInPath)
+
+" newFile this creates a file in root so...?
+map <leader>nf <Action>(NewFile)
+
+" Lsp
+" find project files via filename - Project Files
+map <leader>pf <Action>(GotoFile)
+" Gd -> go to definition"
+" Go to implementation q? -
+map <leader>q <Action>(GotoImplementation)
+
+" Consistent paste
+map p <Action>(EditorPaste)
+" Open markdown Preview
+map <leader>md <Action>(Markdown.Layout.EditorAndPreview)
+
+" Toolwindows
+map <leader>m <Action>(ActivateMavenToolWindow)
+" open file tree (Project View)
+map <leader>pv <Action>(ActivateProjectToolWindow)
+" Git status using fugitive... wait (Git Status)
+map <leader>gs <Action>(ActivateCommitToolWindow)
+" select in views for example in file tree
+map <leader>si <Action>(SelectIn)
+
+" Exit if you need too
+map <leader>ext <Action>(VimPluginToggle)
