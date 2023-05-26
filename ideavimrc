@@ -4,7 +4,7 @@
 " Find more examples here: https://jb.gg/share-ideavimrc
 
 
-"" -- Suggested options --
+"" -- Set section :) --
 " Show a few lines of context around the cursor. Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
 set scrolloff=8
@@ -18,11 +18,17 @@ set hlsearch
 " Colors :)
 set termguicolors
 
-" Don't use Ex mode, use Q for formatting.
-map Q gq
+" spacer as leader
+let mapleader = ' '
+
+" Using system clipboard
+set clipboard+=unnamedplus
+
+" Line numbers
+set number relativenumber
 
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
-
+" -- Plugin section --
 " Highlight copied text
 Plug 'machakann/vim-highlightedyank'
 " Commentary plugin
@@ -36,14 +42,9 @@ Plug 'vim-scripts/ReplaceWithRegister'
 " Blazing-ly fast
 Plug 'easymotion/vim-easymotion'
 
-" spacer as leader
-let mapleader = ' '
-
-" Using system clipboard
-set clipboard+=unnamedplus
-
-" Line numbers
-set number relativenumber
+" -- Map section --
+" Don't use Ex mode, use Q for formatting.
+map Q gq
 
 " Adding empty line
 map <leader><Enter> o<ESC>k
@@ -51,6 +52,8 @@ map <leader><S-Enter> O<ESC>j
 " Adding empty lines and moving
 map <Enter> o<ESC>
 map <S-Enter> O<ESC>
+
+" -- Map IDE Actions section --
 
 " Select everything on the current file
 map <leader>a ggvG  
