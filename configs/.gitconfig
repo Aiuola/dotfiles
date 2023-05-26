@@ -1,0 +1,15 @@
+[user]
+	name = Angelo Bonicelli
+	email = a.bonicelli@iungo.it
+[core]
+	autocrlf = false
+	safecrlf = false
+	excludesfile = /home/a.bonicelli@iungo.it/.gitignore
+	precomposeunicode = true
+	editor = nvim
+[merge]
+	renameLimit = 10000
+[push]
+	autoSetupRemote = true
+[init]
+	defaultBranch = trunk
