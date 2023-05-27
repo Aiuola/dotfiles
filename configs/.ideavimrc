@@ -5,27 +5,17 @@
 
 
 "" -- Set section :) --
-" Show a few lines of context around the cursor. Note that this makes the
-" text scroll if you mouse-click near the start or end of the window.
-set scrolloff=8
-
-" Do incremental searching.
+set scrolloff=10
+set number
+set relativenumber
+set showmode
+set showcmd
+set smartcase
 set incsearch
-
-" Highlight search
 set hlsearch
-
-" Colors :)
-set termguicolors
-
-" spacer as leader
-let mapleader = ' '
-
-" Using system clipboard
+set visualbell
 set clipboard+=unnamedplus
-
-" Line numbers
-set number relativenumber
+let mapleader = ' '
 
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
 " -- Plugin section --
@@ -52,21 +42,21 @@ map <leader><S-Enter> O<ESC>j
 " Adding empty lines and moving
 map <Enter> o<ESC>
 map <S-Enter> O<ESC>
-
-" -- Map IDE Actions section --
-
 " Select everything on the current file
 map <C-a> gg0vG$
 
-" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+" -- Map IDE Actions section --
+" https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
 map \r <Action>(ReformatCode)
 
-"" Map <leader>d to start debug
+" Execution 
 map <leader>d <Action>(Debug)
+map <leader>r <Action>(Run)
 
 "" Map \b to toggle the breakpoint on the current line
-map \b <Action>(ToggleLineBreakpoint)
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>cb <Action>(ToggleConditionalBreakpoint)
 
 " Map \g to quick implementation of the function
 map \g <Action>(QuickImplementations)
@@ -102,7 +92,7 @@ map <leader>md <Action>(Markdown.Layout.EditorAndPreview)
 " Toolwindows
 map <leader>m <Action>(ActivateMavenToolWindow)
 " open file tree (Project View)
-map <leader>pv <Action>(ActivateProjectToolWindow)
+map <leader>pv <Action>(SelectInProjectView)
 " Git status using fugitive... wait (Git Status)
 map <leader>gs <Action>(ActivateCommitToolWindow)
 " select in views for example in file tree
