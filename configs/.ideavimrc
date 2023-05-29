@@ -50,9 +50,10 @@ map <C-a> gg0vG$
 "" Map \r to the Reformat Code action
 map \r <Action>(ReformatCode)
 
-" Execution 
+" Execution
 map <leader>d <Action>(Debug)
 map <leader>r <Action>(Run)
+map <leader>s <Action>(Stop)
 
 "" Map \b to toggle the breakpoint on the current line
 map <leader>b <Action>(ToggleLineBreakpoint)
@@ -64,9 +65,6 @@ map \g <Action>(QuickImplementations)
 " Harpoon...
 " Toggle bookmarks
 map <C-e> <Action>(ToggleBookmark)
-
-" stop
-map <leader>s <Action>(Stop)
 
 " Reload ideavim config
 map <leader>rc <Action>(IdeaVim.ReloadVimRc.reload)
@@ -83,6 +81,9 @@ map <leader>pf <Action>(GotoFile)
 " Gd -> go to definition"
 " Go to implementation q? -
 map <leader>q <Action>(GotoImplementation)
+
+" Toggle function docs
+map <leader>do <Action>(ToggleRenderedDocPresentation)
 
 " Consistent paste
 map p <Action>(EditorPaste)
