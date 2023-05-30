@@ -59,8 +59,7 @@ map <leader>s <Action>(Stop)
 map <leader>b <Action>(ToggleLineBreakpoint)
 map <leader>cb <Action>(ToggleConditionalBreakpoint)
 
-" Map \g to quick implementation of the function
-map \g <Action>(QuickImplementations)
+
 
 " Harpoon...
 " Toggle bookmarks
@@ -81,6 +80,8 @@ map <leader>pf <Action>(GotoFile)
 " Gd -> go to definition"
 " Go to implementation q? -
 map <leader>q <Action>(GotoImplementation)
+" Map \g to quick implementation of the function
+map \g <Action>(QuickImplementations)
 
 " Toggle function docs
 map <leader>do <Action>(ToggleRenderedDocPresentation)
@@ -94,6 +95,10 @@ map <leader>md <Action>(Markdown.Layout.EditorAndPreview)
 map <leader>m <Action>(ActivateMavenToolWindow)
 " open file tree (Project View)
 map <leader>pv <Action>(SelectInProjectView)
+map <leader>cl <Action>(CollapseAll)
+map <C-z> <Action>(Back)
+map <C-x> <Action>(Forward)
+
 " Git status using fugitive... wait (Git Status)
 map <leader>gs <Action>(ActivateCommitToolWindow)
 " select in views for example in file tree
