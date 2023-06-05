@@ -45,6 +45,10 @@ map <S-Enter> O<ESC>
 " Select everything on the current file
 map <C-a> gg0vG$
 
+" Line navigation
+map 4 $
+map 5 ^
+
 " -- Map IDE Actions section --
 " https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
@@ -58,8 +62,6 @@ map <leader>s <Action>(Stop)
 "" Map \b to toggle the breakpoint on the current line
 map <leader>b <Action>(ToggleLineBreakpoint)
 map <leader>cb <Action>(ToggleConditionalBreakpoint)
-
-
 
 " Harpoon...
 " Toggle bookmarks
