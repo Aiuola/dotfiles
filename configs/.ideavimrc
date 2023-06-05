@@ -47,7 +47,7 @@ map <C-a> gg0vG$
 
 " Line navigation
 map 4 $
-map 5 ^
+map 3 ^
 
 " -- Map IDE Actions section --
 " https://jb.gg/abva4t
