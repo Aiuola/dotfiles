@@ -46,8 +46,8 @@ map <S-Enter> O<ESC>
 map <C-a> gg0vG$
 
 " Line navigation
-map 4 $
-map 3 ^
+map m $
+map n ^
 
 " -- Map IDE Actions section --
 " https://jb.gg/abva4t
@@ -97,6 +97,8 @@ map <leader>md <Action>(Markdown.Layout.EditorAndPreview)
 map <leader>m <Action>(ActivateMavenToolWindow)
 " open file tree (Project View)
 map <leader>pv <Action>(SelectInProjectView)
+" Select in...
+map <leader>si <Action>(SelectIn)
 map <leader>cl <Action>(CollapseAll)
 map <C-z> <Action>(Back)
 map <C-x> <Action>(Forward)

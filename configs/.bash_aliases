@@ -5,4 +5,6 @@ alias docker-stop-all='docker stop $(docker ps -a -q)'
 alias docker-rm-all='docker rm $(docker ps -a -q)'
 alias git-merged='git branch --merged | egrep -v "(^\*|master|main|dev)" | xargs git branch -d'
 alias apt-upgrade='sudo apt update && sudo apt upgrade && sudo apt autoremove'
+alias gs='git status'
+alias git-update='git fetch && git pull'
 
