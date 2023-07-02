@@ -6,6 +6,6 @@ vim.keymap.set('n', '<S-Enter>', 'O<ESC>')
 
 vim.keymap.set('n', '<C-a>', 'gg0vG$')
 
-vim.keymap.set('n', '<C-4>', '$')
-vim.keymap.set('n', '<C-5>', '^')
+vim.keymap.set('n', '<C-m>', '$')
+vim.keymap.set('n', '<C-n>', '^')
 
