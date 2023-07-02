@@ -1,7 +1,8 @@
-#bin/bash
+#!/bin/bash
 
-rm ~/.gitconfig
-ln ./.gitconfig ~/.gitconfig
+# This shouldn't change often...
+#rm ~/.gitconfig
+#ln ./.gitconfig ~/.gitconfig
 
 rm ~/.config/alacritty/alacritty.yml
 ln ./alacritty.yml ~/.config/alacritty/alacritty.yml

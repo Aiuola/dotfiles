@@ -7,4 +7,5 @@ alias git-merged='git branch --merged | egrep -v "(^\*|master|main|dev)" | xargs
 alias apt-upgrade='sudo apt update && sudo apt upgrade && sudo apt autoremove'
 alias gs='git status'
 alias git-update='git fetch && git pull'
+alias tmux-init='~/.config/nvim/configs/startup.sh'
 
