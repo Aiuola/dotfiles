@@ -14,7 +14,7 @@ set smartcase
 set incsearch
 set hlsearch
 set visualbell
-set clipboard+=unnamedplus
+set clipboard=unnamed
 let mapleader = ' '
 
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
