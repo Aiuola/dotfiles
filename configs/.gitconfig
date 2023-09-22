@@ -12,4 +12,5 @@
 [push]
 	autoSetupRemote = true
 [init]
-	defaultBranch = trunk
+        defaultBranch = trunk
+
