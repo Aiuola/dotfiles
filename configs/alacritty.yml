@@ -1,4 +1,5 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
+#
 
 window:
   # Window opacity as a floating point number from `0.0` to `1.0`.
@@ -12,6 +13,36 @@ live_config_reload: true
 key_bindings:
   - { key: Return,   mods: Shift,   chars: "\x1b[13;2u" }
   - { key: Return,   mods: Control, chars: "\x1b[13;5u" }
+
+# Font configuration (changes require restart)
+font:
+  # The normal (roman) font face to use.
+  # Style can be specified to pick a specific face.
+  normal:
+    family: OpenDyslexicM Nerd Font Mono
+    style: Light
+    # family: "Fira Code"
+    # family: "Source Code Pro"
+    # style: Retina
+
+  # The bold font face
+  bold:
+    family: OpenDyslexicM Nerd Font Mono
+    style: Medium
+    # family: "Fira Code"
+    # family: "Source Code Pro"
+
+  # The italic font face
+  italic:
+    family: OpenDyslexicM Nerd Font Mono
+    style: "Light Italic"
+    # style: "Light Oblique"
+    # family: "Fira Code"
+    # family: "Source Code Pro"
+    # style: "Medium Italic"
+
+  # Point size of the font
+  size: 14.0
 
 hints:
   # First character in the hint label
