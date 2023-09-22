@@ -2,9 +2,10 @@
 
 All my dotfiles :)
 
-You can just clone this ``~/.config/nvim/`` with
-https://github.com/wbthomason/packer.nvim installed and run ``:PackerSync`` and
-voila you are ready to go.
+The assumption is that this repo was cloned in ``~/dotfiles`` if this is not
+the case then just modify the script.
 
-If you want all the othern configs then: ``ln configs/... destitation``
+You might need to give priviliges to the script via ``chmod +x init.sh``
+
+Then simply run it ``./init.sh``
 

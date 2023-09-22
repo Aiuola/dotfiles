@@ -1,7 +1,7 @@
 -- All my vim sets
 
 -- Using system clipboard
-vim.cmd('set clipboard+=unnamedplus')
+vim.cmd('set clipboard=unnamedplus')
 
 vim.g.mapleader = ' '
 
