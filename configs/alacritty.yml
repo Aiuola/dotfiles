@@ -1,5 +1,4 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
-#
 
 window:
   # Window opacity as a floating point number from `0.0` to `1.0`.
@@ -9,7 +8,7 @@ window:
 # Live config reload (changes require restart)
 live_config_reload: true
 
-# This allows for mapping shift enter in nvim 
+# This allows for mapping shift enter in nvim
 key_bindings:
   - { key: Return,   mods: Shift,   chars: "\x1b[13;2u" }
   - { key: Return,   mods: Control, chars: "\x1b[13;5u" }
@@ -42,7 +41,7 @@ font:
     # style: "Medium Italic"
 
   # Point size of the font
-  size: 14.0
+  size: 14.5
 
 hints:
   # First character in the hint label
@@ -63,5 +62,4 @@ hints:
 
 debug:
   # Display the time it takes to redraw each frame.
-  render_timer: false 
-
+  render_timer: false
