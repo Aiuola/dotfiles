@@ -21,13 +21,13 @@ if [ "$1" == "-f" ]; then
       cd ~/.config/
       ln -s ~/dotfiles/nvim nvim
     else
-      if [ "$2" == "chad"]; then
+      if [ "$2" == "chad" ]; then
         rm -rf ~/.config/nvim/lua/custom
         cd ~/.config/nvim/lua/
         ln -s ~/dotfiles/custom custom
       else
         exit 1;
-        echo "arg 2 was not nvim or chad" 
+        echo "arg 2 was not nvim or chad"
       fi
     fi
 
@@ -42,4 +42,3 @@ else
 fi
 
 echo "Configs setup ended"
-
