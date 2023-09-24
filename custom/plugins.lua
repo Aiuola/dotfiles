@@ -3,6 +3,7 @@ local plugins = {
     "nvim-telescope/telescope.nvim",
     event = "VeryLazy",
     config = function ()
+      require "plugins.configs.telescope"
       require "custom.configs.telescope"
     end
   },
@@ -65,7 +66,8 @@ local plugins = {
         "eslint-lsp",
         "js-debug-adapter",
         "prettier",
-        "typescript-language-server"
+        "typescript-language-server",
+        "jdtls"
       }
     }
   },

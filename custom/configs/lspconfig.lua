@@ -14,6 +14,11 @@ local function organize_imports()
   vim.lsp.buf.execute_command(params)
 end
 
+lspconfig.jdtls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
 lspconfig.tsserver.setup {
   on_attach = on_attach,
   capabilities = capabilities,
