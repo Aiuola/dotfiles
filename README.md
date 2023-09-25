@@ -12,6 +12,8 @@ Need to migrate to [this](https://github.com/folke/lazy.nvim)
 
 ### NvChad neovim
 
+- Install a NerdFont I am using the [openDsylexia](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/OpenDyslexic.zip)
+
 - Just install [NvChad](https://github.com/NvChad/NvChad ) from git via
 `git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1`
 

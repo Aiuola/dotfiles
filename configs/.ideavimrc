@@ -50,8 +50,13 @@ map N ^
 
 " -- Map IDE Actions section --
 " https://jb.gg/abva4t
-"" Map \r to the Reformat Code action
-map \r <Action>(ReformatCode)
+"" Map reformat code on save
+map <C-w> <Action>(ReformatCode)
+map <C-q> <Action>()
+
+map <leader>e <Action>()
+
+map <C-n> <Action>(ActivateProjectToolWindow)
 
 " Execution
 map <leader>d <Action>(Debug)
@@ -69,15 +74,15 @@ map <C-e> <Action>(ToggleBookmark)
 " Reload ideavim config
 map <leader>rc <Action>(IdeaVim.ReloadVimRc.reload)
 
-" project search for a file via contents - Project Search
-map <leader>ps <Action>(FindInPath)
+" live grep/ project search - Telescope
+map <C-s> <Action>(FindInPath)
 
 " newFile this creates a file in root so...?
 map <leader>nf <Action>(NewFile)
 
 " Lsp
 " find project files via filename - Project Files
-map <leader>pf <Action>(GotoFile)
+map <C-f> <Action>(GotoFile)
 " Gd -> go to definition"
 " Go to implementation q? -
 map <leader>q <Action>(GotoImplementation)
@@ -99,6 +104,7 @@ map <leader>pv <Action>(SelectInProjectView)
 " Select in...
 map <leader>si <Action>(SelectIn)
 map <leader>cl <Action>(CollapseAll)
+" Go back/forward
 map <C-z> <Action>(Back)
 map <C-x> <Action>(Forward)
 
