@@ -45,8 +45,8 @@ map <S-Enter> O<ESC>
 map <C-a> gg0vG$
 
 " Line navigation
-map M $
-map N ^
+map P $
+map O ^
 
 " -- Map IDE Actions section --
 " https://jb.gg/abva4t
@@ -54,7 +54,7 @@ map N ^
 map <C-w> <Action>(ReformatCode)
 map <C-q> <Action>()
 
-map <leader>e <Action>()
+"" map <leader>e <Action>()
 
 map <C-n> <Action>(ActivateProjectToolWindow)
 
