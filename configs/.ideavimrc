@@ -56,7 +56,7 @@ map <C-q> <Action>()
 
 "" map <leader>e <Action>()
 
-map <C-n> <Action>(ActivateProjectToolWindow)
+map <C-n> <Action>(SelectInProjectView)
 
 " Execution
 map <leader>d <Action>(Debug)
