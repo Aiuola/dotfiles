@@ -3,10 +3,10 @@ vim.keymap.set('n', '<S-Enter>', 'O<ESC>')
 
 vim.keymap.set('n', '<C-a>', 'gg0vG$')
 
-vim.keymap.set('v', 'M', '$')
-vim.keymap.set('v', 'N', '^')
-vim.keymap.set('n', 'M', '$')
-vim.keymap.set('n', 'N', '^')
+vim.keymap.set('v', '<C-p>', '$')
+vim.keymap.set('v', '<C-o>', '^')
+vim.keymap.set('n', '<C-p>', '$')
+vim.keymap.set('n', '<C-o>', '^')
 
 vim.keymap.set('n', '<C-w>', ':update<cr>')
 vim.keymap.set('i', '<C-w>', '<Esc>:update<cr>gi')

@@ -45,8 +45,8 @@ map <S-Enter> O<ESC>
 map <C-a> gg0vG$
 
 " Line navigation
-map P $
-map O ^
+map <C-p> $
+map <C-o> ^
 
 " -- Map IDE Actions section --
 " https://jb.gg/abva4t
