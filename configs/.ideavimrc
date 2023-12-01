@@ -1,4 +1,4 @@
-" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+ " .ideavimrc is a configuration file for IdeaVim plugin. It uses
 "   the same commands as the original .vimrc configuration.
 " You can find a list of commands here: https://jb.gg/h38q75
 " Find more examples here: https://jb.gg/share-ideavimrc
@@ -40,6 +40,7 @@ map <leader><Enter> o<ESC>k
 map <leader><S-Enter> O<ESC>j
 " Adding empty lines and moving
 map <Enter> o<ESC>
+" huh... this doesn't work
 map <S-Enter> O<ESC>
 " Select everything on the current file
 map <C-a> gg0vG$
@@ -48,14 +49,24 @@ map <C-a> gg0vG$
 map <C-p> $
 map <C-o> ^
 
+" Switch tabs
+nmap <C-l> <Action>(NextTab)
+nmap <C-h> <Action>(PreviousTab)
+
 " -- Map IDE Actions section --
 " https://jb.gg/abva4t
 "" Map reformat code on save
 map <C-w> <Action>(ReformatCode)
-map <C-q> <Action>()
+" This is already mapped to quit window in nvChad
+map <C-q> <Action>(CloseContent)
+" Clear the clutter ;)
+map <A-q> <Action>(CloseAllUnmodifiedEditors)
 
+" Todo this should be mapped to the file-system tree like in
+" nvChad
 "" map <leader>e <Action>()
 
+" I really can't remember why this is here since the pv action exists
 map <C-n> <Action>(SelectInProjectView)
 
 " Execution
@@ -112,6 +123,12 @@ map <C-x> <Action>(Forward)
 map <leader>gs <Action>(ActivateCommitToolWindow)
 " select in views for example in file tree
 map <leader>si <Action>(SelectIn)
+map <leader>gb <Action>(Annotate)
 
 " Exit if you need too
 map <leader>ext <Action>(VimPluginToggle)
+
+" Visual mode mappings
+
+" Search selected visual text (not in the default register)
+xmap <leader>s y
