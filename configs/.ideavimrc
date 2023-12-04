@@ -4,7 +4,7 @@
 " Find more examples here: https://jb.gg/share-ideavimrc
 
 "" -- Set section :) --
-set scrolloff=10
+set scrolloff=8
 set number
 set relativenumber
 set showmode
@@ -32,101 +32,98 @@ Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'easymotion/vim-easymotion'
 
 " -- Map section --
-" Don't use Ex mode, use Q for formatting.
-map Q gq
-
-" Adding empty line
-map <leader><Enter> o<ESC>k
-map <leader><S-Enter> O<ESC>j
+" Adding empty lines
+nmap <leader><Enter> o<ESC>k
+nmap <leader><S-Enter> O<ESC>j
 " Adding empty lines and moving
-map <Enter> o<ESC>
+nmap <Enter> o<ESC>
 " huh... this doesn't work
-map <S-Enter> O<ESC>
-" Select everything on the current file
-map <C-a> gg0vG$
+nmap <S-Enter> O<ESC>
+" Select everything in the current file
+nmap <C-a> gg0vG$
 
 " Line navigation
 map <C-p> $
 map <C-o> ^
 
 " Switch tabs
-nmap <C-l> <Action>(NextTab)
-nmap <C-h> <Action>(PreviousTab)
+map <C-l> <Action>(NextTab)
+map <C-h> <Action>(PreviousTab)
 
 " -- Map IDE Actions section --
 " https://jb.gg/abva4t
 "" Map reformat code on save
-map <C-w> <Action>(ReformatCode)
+nmap <C-w> <Action>(ReformatCode)
 " This is already mapped to quit window in nvChad
-map <C-q> <Action>(CloseContent)
+nmap <C-q> <Action>(CloseContent)
 " Clear the clutter ;)
-map <A-q> <Action>(CloseAllUnmodifiedEditors)
+nmap <A-q> <Action>(CloseAllUnmodifiedEditors)
 
-" Todo this should be mapped to the file-system tree like in
+" Todo: this should be mapped to the file-system tree like in
 " nvChad
 "" map <leader>e <Action>()
 
 " I really can't remember why this is here since the pv action exists
-map <C-n> <Action>(SelectInProjectView)
+nmap <C-n> <Action>(SelectInProjectView)
 
 " Execution
-map <leader>d <Action>(Debug)
-map <leader>r <Action>(Run)
-map <leader>s <Action>(Stop)
+nmap <leader>d <Action>(Debug)
+nmap <leader>r <Action>(Run)
+nmap <leader>s <Action>(Stop)
 
 "" Map \b to toggle the breakpoint on the current line
-map <leader>b <Action>(ToggleLineBreakpoint)
-map <leader>cb <Action>(ToggleConditionalBreakpoint)
+nmap <leader>b <Action>(ToggleLineBreakpoint)
+nmap <leader>cb <Action>(ToggleConditionalBreakpoint)
 
 " Harpoon...
 " Toggle bookmarks
-map <C-e> <Action>(ToggleBookmark)
+nmap <C-e> <Action>(ToggleBookmark)
 
 " Reload ideavim config
-map <leader>rc <Action>(IdeaVim.ReloadVimRc.reload)
+nmap <leader>rc <Action>(IdeaVim.ReloadVimRc.reload)
 
 " live grep/ project search - Telescope
 map <C-s> <Action>(FindInPath)
 
 " newFile this creates a file in root so...?
-map <leader>nf <Action>(NewFile)
+nmap <leader>nf <Action>(NewFile)
 
 " Lsp
 " find project files via filename - Project Files
 map <C-f> <Action>(GotoFile)
 " Gd -> go to definition"
 " Go to implementation q? -
-map <leader>q <Action>(GotoImplementation)
+nmap <leader>q <Action>(GotoImplementation)
 " Map \g to quick implementation of the function
-map \g <Action>(QuickImplementations)
+nmap \g <Action>(QuickImplementations)
 
 " Toggle function docs
-map <leader>do <Action>(ToggleRenderedDocPresentation)
+nmap <leader>do <Action>(ToggleRenderedDocPresentation)
 
 " Consistent paste
-map p <Action>(EditorPaste)
+nmap p <Action>(EditorPaste)
 " Open markdown Preview
-map <leader>md <Action>(Markdown.Layout.EditorAndPreview)
+nmap <leader>md <Action>(Markdown.Layout.EditorAndPreview)
 
 " Toolwindows
-map <leader>ma <Action>(ActivateMavenToolWindow)
+nmap <leader>ma <Action>(ActivateMavenToolWindow)
 " open file tree (Project View)
-map <leader>pv <Action>(SelectInProjectView)
+nmap <leader>pv <Action>(SelectInProjectView)
 " Select in...
-map <leader>si <Action>(SelectIn)
-map <leader>cl <Action>(CollapseAll)
+nmap <leader>si <Action>(SelectIn)
+nmap <leader>cl <Action>(CollapseAll)
 " Go back/forward
-map <C-z> <Action>(Back)
-map <C-x> <Action>(Forward)
+nmap <C-z> <Action>(Back)
+nmap <C-x> <Action>(Forward)
 
 " Git status using fugitive... wait (Git Status)
-map <leader>gs <Action>(ActivateCommitToolWindow)
+nmap <leader>gs <Action>(ActivateCommitToolWindow)
 " select in views for example in file tree
-map <leader>si <Action>(SelectIn)
-map <leader>gb <Action>(Annotate)
+nmap <leader>si <Action>(SelectIn)
+nmap <leader>gb <Action>(Annotate)
 
 " Exit if you need too
-map <leader>ext <Action>(VimPluginToggle)
+nmap <leader>ext <Action>(VimPluginToggle)
 
 " Visual mode mappings
 
