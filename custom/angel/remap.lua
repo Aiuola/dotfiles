@@ -10,7 +10,7 @@ vim.keymap.set('n', '<C-o>', '^')
 
 vim.keymap.set('n', '<C-w>', ':update<cr>')
 vim.keymap.set('i', '<C-w>', '<Esc>:update<cr>gi')
-
 vim.keymap.set('n', '<C-q>', ':q<cr>')
 
 vim.keymap.set('n', '<A-w>', ':update<cr>:q<cr>')
+vim.keymap.set('n', '<M-C-q>', ':q!<cr>')

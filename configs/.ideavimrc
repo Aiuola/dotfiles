@@ -96,6 +96,7 @@ map <C-f> <Action>(GotoFile)
 nmap <leader>q <Action>(GotoImplementation)
 " Map \g to quick implementation of the function
 nmap \g <Action>(QuickImplementations)
+nmap <A-r> <Action>(RenameElement)
 
 " Toggle function docs
 nmap <leader>do <Action>(ToggleRenderedDocPresentation)
@@ -128,4 +129,5 @@ nmap <leader>ext <Action>(VimPluginToggle)
 " Visual mode mappings
 
 " Search selected visual text (not in the default register)
+" TODO: actually do it
 xmap <leader>s y
