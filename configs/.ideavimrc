@@ -1,8 +1,3 @@
- " .ideavimrc is a configuration file for IdeaVim plugin. It uses
-"   the same commands as the original .vimrc configuration.
-" You can find a list of commands here: https://jb.gg/h38q75
-" Find more examples here: https://jb.gg/share-ideavimrc
-
 "" -- Set section :) --
 set scrolloff=8
 set number
@@ -22,8 +17,6 @@ let mapleader = ' '
 Plug 'machakann/vim-highlightedyank'
 " Commentary plugin
 Plug 'tpope/vim-commentary'
-" Always highlight copy (yank)
-Plug 'machakann/vim-highlightedyank'
 " File tree
 Plug 'preservim/nerdtree'
 " Replace a line with register
@@ -50,18 +43,12 @@ map <C-o> ^
 map <C-l> <Action>(NextTab)
 map <C-h> <Action>(PreviousTab)
 
-" -- Map IDE Actions section --
-" https://jb.gg/abva4t
 "" Map reformat code on save
 nmap <C-w> <Action>(ReformatCode)
 " This is already mapped to quit window in nvChad
 nmap <C-q> <Action>(CloseContent)
 " Clear the clutter ;)
 nmap <A-q> <Action>(CloseAllUnmodifiedEditors)
-
-" Todo: this should be mapped to the file-system tree like in
-" nvChad
-"" map <leader>e <Action>()
 
 " I really can't remember why this is here since the pv action exists
 nmap <C-n> <Action>(SelectInProjectView)
@@ -70,32 +57,28 @@ nmap <C-n> <Action>(SelectInProjectView)
 nmap <leader>d <Action>(Debug)
 nmap <leader>r <Action>(Run)
 nmap <leader>s <Action>(Stop)
+nmap <leader>c <Action>(editRunConfigurations)
 
 "" Map \b to toggle the breakpoint on the current line
 nmap <leader>b <Action>(ToggleLineBreakpoint)
 nmap <leader>cb <Action>(ToggleConditionalBreakpoint)
 
-" Harpoon...
 " Toggle bookmarks
 nmap <C-e> <Action>(ToggleBookmark)
 
 " Reload ideavim config
 nmap <leader>rc <Action>(IdeaVim.ReloadVimRc.reload)
 
-" live grep/ project search - Telescope
-map <C-s> <Action>(FindInPath)
-
 " newFile this creates a file in root so...?
 nmap <leader>nf <Action>(NewFile)
 
-" Lsp
-" find project files via filename - Project Files
+" Lsp? 
+" Find file
 map <C-f> <Action>(GotoFile)
-" Gd -> go to definition"
-" Go to implementation q? -
+" live grep/ project search
+map <C-s> <Action>(FindInPath)
+nmap <gd> <Action>(GotoDeclaration)
 nmap <leader>q <Action>(GotoImplementation)
-" Map \g to quick implementation of the function
-nmap \g <Action>(QuickImplementations)
 nmap <A-r> <Action>(RenameElement)
 
 " Toggle function docs
@@ -119,8 +102,7 @@ nmap <C-x> <Action>(Forward)
 
 " Git status using fugitive... wait (Git Status)
 nmap <leader>gs <Action>(ActivateCommitToolWindow)
-" select in views for example in file tree
-nmap <leader>si <Action>(SelectIn)
+" Annotate with git blame
 nmap <leader>gb <Action>(Annotate)
 
 " Exit if you need too
@@ -130,4 +112,4 @@ nmap <leader>ext <Action>(VimPluginToggle)
 
 " Search selected visual text (not in the default register)
 " TODO: actually do it
-xmap <leader>s y
+" xmap <leader>s y
