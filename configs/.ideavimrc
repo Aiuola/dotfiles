@@ -39,16 +39,16 @@ nmap <C-a> gg0vG$
 map <C-p> $
 map <C-o> ^
 
-" Switch tabs
+" Tabs
 map <C-l> <Action>(NextTab)
 map <C-h> <Action>(PreviousTab)
+map <C-i> <Action>(PinActiveEditorTab)
+" This is already mapped to quit window in nvChad
+nmap <C-q> <Action>(CloseContent)
+nmap <A-q> <Action>(CloseAllUnmodifiedEditors)
 
 "" Map reformat code on save
 nmap <C-w> <Action>(ReformatCode)
-" This is already mapped to quit window in nvChad
-nmap <C-q> <Action>(CloseContent)
-" Clear the clutter ;)
-nmap <A-q> <Action>(CloseAllUnmodifiedEditors)
 
 " I really can't remember why this is here since the pv action exists
 nmap <C-n> <Action>(SelectInProjectView)
@@ -58,6 +58,7 @@ nmap <leader>d <Action>(Debug)
 nmap <leader>r <Action>(Run)
 nmap <leader>s <Action>(Stop)
 nmap <leader>c <Action>(editRunConfigurations)
+nmap <leader>R <Action>(RunClass)
 
 "" Map \b to toggle the breakpoint on the current line
 nmap <leader>b <Action>(ToggleLineBreakpoint)
@@ -72,7 +73,7 @@ nmap <leader>rc <Action>(IdeaVim.ReloadVimRc.reload)
 " newFile this creates a file in root so...?
 nmap <leader>nf <Action>(NewFile)
 
-" Lsp? 
+" Lsp?
 " Find file
 map <C-f> <Action>(GotoFile)
 " live grep/ project search
@@ -80,12 +81,16 @@ map <C-s> <Action>(FindInPath)
 nmap <gd> <Action>(GotoDeclaration)
 nmap <leader>q <Action>(GotoImplementation)
 nmap <A-r> <Action>(RenameElement)
+nmap <leader>i <Action>(ImplementMethods)
+nmap <C-m> <Action>(FileStructurePopup)
+nmap <C-u> <Action>(GotoSuperMethod)
 
 " Toggle function docs
 nmap <leader>do <Action>(ToggleRenderedDocPresentation)
 
-" Consistent paste
+" Consistent editor actions
 nmap p <Action>(EditorPaste)
+nmap <Esc> <Action>(EditorEscape)
 " Open markdown Preview
 nmap <leader>md <Action>(Markdown.Layout.EditorAndPreview)
 
@@ -113,3 +118,6 @@ nmap <leader>ext <Action>(VimPluginToggle)
 " Search selected visual text (not in the default register)
 " TODO: actually do it
 " xmap <leader>s y
+
+" What is this?
+set ideajoin
