@@ -78,5 +78,8 @@ local plugins = {
       require "custom.configs.lspconfig"
     end,
   },
+  {
+    'ThePrimeagen/vim-be-good'
+  }
 }
 return plugins

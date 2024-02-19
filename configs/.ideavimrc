@@ -55,6 +55,7 @@ nmap <C-n> <Action>(SelectInProjectView)
 
 " Execution
 nmap <leader>d <Action>(Debug)
+nmap <leader>D <Action>(XDebugger.MuteBreakpoints)
 nmap <leader>r <Action>(Run)
 nmap <leader>s <Action>(Stop)
 nmap <leader>c <Action>(editRunConfigurations)
