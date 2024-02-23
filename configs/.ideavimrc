@@ -38,6 +38,8 @@ nmap <C-a> gg0vG$
 " Line navigation
 map <C-p> $
 map <C-o> ^
+map <C-[> [m
+map <C-;> ]m
 
 " Tabs
 map <C-l> <Action>(NextTab)
@@ -47,7 +49,7 @@ map <C-i> <Action>(PinActiveEditorTab)
 nmap <C-q> <Action>(CloseContent)
 nmap <A-q> <Action>(CloseAllUnmodifiedEditors)
 
-"" Map reformat code on save
+" Map reformat code on save
 nmap <C-w> <Action>(ReformatCode)
 
 " I really can't remember why this is here since the pv action exists
@@ -81,10 +83,10 @@ map <C-f> <Action>(GotoFile)
 map <C-s> <Action>(FindInPath)
 nmap <gd> <Action>(GotoDeclaration)
 nmap <leader>q <Action>(GotoImplementation)
+nmap <A-s> <Action>(GotoSuperMethod)
 nmap <A-r> <Action>(RenameElement)
 nmap <leader>i <Action>(ImplementMethods)
 nmap <C-m> <Action>(FileStructurePopup)
-nmap <C-u> <Action>(GotoSuperMethod)
 
 " Toggle function docs
 nmap <leader>do <Action>(ToggleRenderedDocPresentation)
