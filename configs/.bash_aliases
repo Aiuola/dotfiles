@@ -9,4 +9,4 @@ alias gs='git status'
 alias git-update='git fetch && git pull'
 alias tmux-init='~/.config/nvim/configs/startup.sh'
 
-alias vim='nvim'
+alias vim='nvim'q
