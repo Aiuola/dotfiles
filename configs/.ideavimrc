@@ -55,6 +55,9 @@ nmap <C-w> <Action>(ReformatCode)
 " I really can't remember why this is here since the pv action exists
 nmap <C-n> <Action>(SelectInProjectView)
 
+" Build
+nmap <C-b> <Action>(BuildArtifact)
+
 " Execution
 nmap <leader>d <Action>(Debug)
 nmap <leader>D <Action>(XDebugger.MuteBreakpoints)
