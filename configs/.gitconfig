@@ -1,10 +1,8 @@
 [user]
 	name = Angelo Bonicelli
-	email = angelo.bonicelli@gmail.com
 [core]
-	autocrlf = false
+	autocrlf = input
 	safecrlf = false
-	excludesfile = /home/a.bonicelli@iungo.it/.gitignore
 	precomposeunicode = true
 	editor = nvim
 [merge]
@@ -12,7 +10,7 @@
 [push]
 	autoSetupRemote = true
 [init]
-  defaultBranch = trunk
+        defaultBranch = trunk
 [rerere]
         enabled = 1
         autoUpdate = true
