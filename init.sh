@@ -3,7 +3,7 @@
 conf="configs/"
 
 rm ~/.gitconfig
-ln "conf".gitconfig ~/.gitconfig
+ln "$conf".gitconfig ~/.gitconfig
 git config --global user.email = "$1"
 
 rm ~/.config/alacritty/alacritty.yml
