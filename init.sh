@@ -6,8 +6,8 @@ rm ~/.gitconfig
 ln "$conf".gitconfig ~/.gitconfig
 git config --global user.email = "$1"
 
-rm ~/.config/alacritty/alacritty.yml
-ln "$conf"alacritty.yml ~/.config/alacritty/alacritty.yml
+rm ~/.config/alacritty/alacritty.toml
+ln "$conf"alacritty.yml ~/.config/alacritty/alacritty.toml
 
 rm ~/.ideavimrc
 ln "$conf".ideavimrc ~/.ideavimrc

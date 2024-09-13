@@ -1,0 +1,32 @@
+live_config_reload = true
+
+[debug]
+render_timer = false
+
+[font]
+size = 14.5
+
+[font.bold]
+family = "OpenDyslexicM Nerd Font Mono"
+style = "Medium"
+
+[font.italic]
+family = "OpenDyslexicM Nerd Font Mono"
+style = "Light Italic"
+
+[font.normal]
+family = "OpenDyslexicM Nerd Font Mono"
+style = "Light"
+
+[[keyboard.bindings]]
+chars = "\u001B[13;2u"
+key = "Return"
+mods = "Shift"
+
+[[keyboard.bindings]]
+chars = "\u001B[13;5u"
+key = "Return"
+mods = "Control"
+
+[window]
+opacity = 0.8
