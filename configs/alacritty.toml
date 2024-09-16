@@ -7,15 +7,15 @@ render_timer = false
 size = 14.5
 
 [font.bold]
-family = "OpenDyslexicM Nerd Font Mono"
+family = "Mononoki Nerd Font Mono"
 style = "Medium"
 
 [font.italic]
-family = "OpenDyslexicM Nerd Font Mono"
+family = "Mononoki Nerd Font Mono"
 style = "Light Italic"
 
 [font.normal]
-family = "OpenDyslexicM Nerd Font Mono"
+family = "Mononoki Nerd Font Mono"
 style = "Light"
 
 [[keyboard.bindings]]

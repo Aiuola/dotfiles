@@ -40,4 +40,6 @@ else
     echo "First arg was not -f, provide -f as the first arg for vim config deletion"
 fi
 
+curl -s https://raw.githubusercontent.com/juven/maven-bash-completion/master/bash_completion.bash >> ~/.mvn_completion.bash
+
 echo "Configs setup ended"
