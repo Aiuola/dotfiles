@@ -7,13 +7,13 @@ ln "$conf".gitconfig ~/.gitconfig
 git config --global user.email = "$1"
 
 rm ~/.config/alacritty/alacritty.toml
-ln "$conf"alacritty.yml ~/.config/alacritty/alacritty.toml
+ln "$conf"alacritty.toml ~/.config/alacritty/alacritty.toml
 
 rm ~/.ideavimrc
 ln "$conf".ideavimrc ~/.ideavimrc
 
-rm ~/.shell_aliases
-ln "$conf".shell_aliases ~/.shell_aliases
+rm ~/.oh-my-zsh/custom/aliases.zsh
+ln "$conf"aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
 
 if [ "$2" == "-f" ]; then
     if [ "$3" == "nvim" ]; then
