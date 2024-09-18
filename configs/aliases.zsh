@@ -10,5 +10,6 @@ alias git-update='git fetch && git pull'
 alias tmux-init='~/.config/nvim/configs/startup.sh'
 
 alias gedit='flatpak run org.gnome.gedit'
+alias dolphin='flatpak run org.kde.dolphin'
 
 alias vim='nvim'

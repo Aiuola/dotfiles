@@ -1,5 +1,6 @@
 [user]
 	name = Angelo Bonicelli
+	email = angelo.bonicelli@iungo.it
 [core]
 	autocrlf = input
 	safecrlf = false

@@ -127,3 +127,4 @@ nmap <leader>ext <Action>(VimPluginToggle)
 
 " What is this?
 set ideajoin
+set clipboard^=ideaput
